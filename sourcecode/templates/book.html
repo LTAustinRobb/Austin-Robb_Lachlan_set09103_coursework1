@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+<table>
+{% for elem in list %}
+  {% for k,v in elem.iteritems()%}
+    {%if v == title %}
+      <tr>
+      <td>Title:</td>
+      <td>{{elem.title}}</td>
+      </tr>
+
+      <tr>
+      <td>Author:</td>
+      <td>{{elem.author}}</td>
+      </tr>
+    {% endif%}
+  {%endfor%}
+{%endfor%}
+</table>
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+ <ul>
+  {% for key, value in data.iteritems() %}
+   {% for key in value[0] %}
+    <li>{{key}}</li>
+   {% endfor %}
+  {% endfor %}
+ </ul>
+</body>
+</html>
+
