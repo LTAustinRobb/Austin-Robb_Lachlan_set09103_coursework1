@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+</head>
+
+<body>
+<ul>
+{%for elem in list %}
+ {% for k,v in elem.iteritems()%}
+   {% if v == author %}
+    <li><a href ="{{url_for('title',title=elem.title)}}">{{elem.title}}</a></li>
+   {% endif %}
+ {%endfor%}
+{%endfor%}
+</body>
+
+</html>
+

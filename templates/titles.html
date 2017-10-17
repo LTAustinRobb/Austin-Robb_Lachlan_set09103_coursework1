@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+ <ul>
+  {% for elem in list%}
+    <li><a href ="{{url_for('title',title=elem)}}">{{elem}}</a></li>
+  {% endfor %}
+ </ul>
+</body>
+</html>
+
