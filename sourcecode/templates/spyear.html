@@ -7,7 +7,7 @@
 <ul>
 {%for elem in list %}
  {% for k,v in elem.iteritems()%}
-   {% if v == sppub %}
+   {% if v == spyear%}
     <li><a href ="{{url_for('title',title=elem.title)}}">{{elem.title}}</a></li>
    {% endif %}
  {%endfor%}

@@ -8,6 +8,9 @@
   {% for k,v in elem.iteritems()%}
     {%if v == title %}
       <tr>
+      <td><img src={{elem.cover}}> </td>
+      </tr>
+      <tr>
       <td>Title:</td>
       <td>{{elem.title}}</td>
       </tr>
@@ -16,6 +19,22 @@
       <td>Author:</td>
       <td>{{elem.author}}</td>
       </tr>
+
+      <tr>
+      <td>Genre:</td>
+      <td>{{elem.genre}}</td>
+      </tr>
+
+      <tr>
+      <td>Publisher:</td>
+      <td>{{elem.publisher}}</td>
+      </tr>
+
+      <tr>
+      <td>Released:</td>
+      <td>{{elem.published}}</td>
+      </tr>
+
     {% endif%}
   {%endfor%}
 {%endfor%}

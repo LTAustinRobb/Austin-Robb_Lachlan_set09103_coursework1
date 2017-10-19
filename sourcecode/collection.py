@@ -57,5 +57,38 @@ def publisher():
 def sppub(sppub):
   return render_template("sppub.html",sppub=sppub,list=book_list,plist=plist)
 
+@app.route('/genre')
+def genre():
+  glist = []
+  for elem in book_list:
+    for k,v in elem.iteritems():
+      if k =='genre':
+        if v not in glist:
+          glist.append(v)
+          glist.sort()
+  return render_template("genres.html", list=glist)
+
+@app.route('/genre/<spgenre>')
+def spgenre(spgenre):
+  return render_template("spgenre.html",spgenre=spgenre,list=book_list)
+
+@app.route('/year')
+def year():
+  ylist=[]
+  for elem in book_list:
+    for k,v in elem.iteritems():
+      if k =='published':
+        if v not in ylist:
+          ylist.append(v)
+          ylist.sort()
+  return render_template("year.html",list=ylist)
+
+@app.route('/year/<spyear>')
+def spyear(spyear):
+  return render_template("spyear.html",spyear=spyear,list=book_list)
+
+
+
+
 if __name__== "__main__":
   app.run(host='0.0.0.0', debug=True)
