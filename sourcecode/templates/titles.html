@@ -3,11 +3,16 @@
 <head>
 </head>
 <body>
- <ul>
-  {% for elem in list%}
-    <li><a href ="{{url_for('title',title=elem)}}">{{elem}}</a></li>
-  {% endfor %}
- </ul>
+ <table>
+  {% for row in list|batch(3)%}
+    <tr>
+    {%for elem in row %}
+    <td> <a href ="{{url_for('title',title=elem)}}">{{elem}}</a></td>
+    {% endfor %}
+  </tr>
+  {%endfor%}
+
+ </table>
 </body>
 </html>
 

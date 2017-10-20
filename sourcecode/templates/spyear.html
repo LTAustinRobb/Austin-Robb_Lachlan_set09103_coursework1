@@ -4,14 +4,15 @@
 </head>
 
 <body>
-<ul>
-{%for elem in list %}
- {% for k,v in elem.iteritems()%}
-   {% if v == spyear%}
-    <li><a href ="{{url_for('title',title=elem.title)}}">{{elem.title}}</a></li>
-   {% endif %}
- {%endfor%}
+<table>
+{%for row in list|batch(3) %}
+  <tr>
+    {%for elem in row%}
+      <td><a href="{{url_for('title',title=elem)}}">{{elem}}</a></td>
+    {%endfor%}
+  </tr> 
 {%endfor%}
+</table>
 </body>
 
 </html>
