@@ -1,7 +1,7 @@
 {
  "books":[
    {
-     "cover":"/static/childhoodsend.jpg",
+     "cover":"/static/img/childhoodsend.jpg",
      "title":"Childhood's End",
      "author":"Arthur C Clarke",
      "genre":"Science Fiction",
@@ -9,7 +9,7 @@
      "published":"1954",
      "blurb":"stuff happens"
    },
-   { "cover":"/static/Neverwhere.jpg",
+   { "cover":"/static/img/Neverwhere.jpg",
      "title":"Neverwhere",
      "author":"Neil Gaiman",
      "genre":"Fantasy",
@@ -17,7 +17,7 @@
      "published":"1996",
      "blurb":"other stuff happens"
    }, 
-   { "cover":"/static/Boneshaker.jpg",
+   { "cover":"/static/img/Boneshaker.jpg",
      "title":"Boneshaker",
      "author":"Cherie Priest",
      "genre":"Science Fiction",

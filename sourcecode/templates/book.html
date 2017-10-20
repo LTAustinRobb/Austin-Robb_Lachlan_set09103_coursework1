@@ -1,15 +1,14 @@
 <!doctype html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="static/css/book.css">
 </head>
 <body>
-<table>
 {% for elem in list %}
   {% for k,v in elem.iteritems()%}
     {%if v == title %}
-      <tr>
-      <td><img src={{elem.cover}}> </td>
-      </tr>
+     <div id="img"> <img src={{elem.cover}}></div>
+      <table>
       <tr>
       <td>Title:</td>
       <td>{{elem.title}}</td>
@@ -34,6 +33,9 @@
       <td>Released:</td>
       <td>{{elem.published}}</td>
       </tr>
+      <tr>
+      <td>Blurb:</td>
+      <td>{{elem.blurb}}</td>
 
     {% endif%}
   {%endfor%}
