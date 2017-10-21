@@ -26,14 +26,23 @@ def getsplist(sort):
   return list
 @app.route('/',methods=['GET','POST'])
 def index():
- # global d
+  if request.method == 'POST':
+    title = request.form['title']
+    author = request.form['author']
+    genre = request.form['genre']
+    publisher = request.form['publisher']
+    year = request.form['year']
+    book ='{"title":"'+title+'"}'
+    book_list.append(book)
+      
   return render_template("main.html")
+
 
 @app.route('/title')
 def titles():
   sort='title'
   list=getlist(sort)
-  return render_template("titles.html",list=list)
+  return render_template("titles.html",list=list,books=book_list,title="Title")
 
 @app.route('/title/<title>')
 def title(title):
@@ -49,7 +58,7 @@ def author():
 def spauthor(spauthor):
   sort = spauthor
   list=getsplist(sort)
-  return render_template("spauthor.html",author=spauthor,list=list)
+  return render_template("titles.html",title=spauthor,list=list,books=book_list)
 @app.route('/publisher')
 def publisher():
   sort = 'publisher'
@@ -61,7 +70,7 @@ def publisher():
 def sppub(sppub):
   sort = sppub
   list = getsplist(sort)
-  return render_template("sppub.html",sppub=sppub,list=list)
+  return render_template("titles.html",title=sppub,list=list,books=book_list)
 
 @app.route('/genre')
 def genre():
@@ -73,7 +82,7 @@ def genre():
 def spgenre(spgenre):
   sort=spgenre
   list=getsplist(sort)
-  return render_template("spgenre.html",spgenre=spgenre,list=list)
+  return render_template("titles.html",title=spgenre,list=list,books=book_list)
 
 @app.route('/year')
 def year():
@@ -85,7 +94,7 @@ def year():
 def spyear(spyear):
   sort=spyear
   list=getsplist(sort)
-  return render_template("spyear.html",spyear=spyear,list=list)
+  return render_template("titles.html",title=spyear,list=list,books=book_list)
 
 
 

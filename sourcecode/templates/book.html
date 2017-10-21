@@ -1,14 +1,15 @@
 <!doctype html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="static/css/book.css">
+<link rel="stylesheet" type="text/css" href="../static/css/book.css">
 </head>
 <body>
 {% for elem in list %}
   {% for k,v in elem.iteritems()%}
     {%if v == title %}
      <div id="img"> <img src={{elem.cover}}></div>
-      <table>
+     <div id="info">
+     <table>
       <tr>
       <td>Title:</td>
       <td>{{elem.title}}</td>
@@ -41,6 +42,7 @@
   {%endfor%}
 {%endfor%}
 </table>
+</div>
 </body>
 </html>
 

@@ -1,18 +1,30 @@
 <!doctype html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="../static/css/titles.css">
 </head>
 <body>
- <table>
+<h1>{{title}}</h1>
+<div id="tbl">
+ <table id="table">
   {% for row in list|batch(3)%}
     <tr>
     {%for elem in row %}
-    <td> <a href ="{{url_for('title',title=elem)}}">{{elem}}</a></td>
+      {%for book in books%}
+        {%for k,v in book.iteritems()%}
+          {%if v == elem%}
+            <td> <a href ="{{url_for('title',title=elem)}}">
+            <img src={{book.cover}}/></a>
+            <p>{{elem}}</p></td>
+          {%endif%}
+        {%endfor%}
+      {%endfor%}  
     {% endfor %}
   </tr>
   {%endfor%}
 
  </table>
+</div>
 </body>
 </html>
 
