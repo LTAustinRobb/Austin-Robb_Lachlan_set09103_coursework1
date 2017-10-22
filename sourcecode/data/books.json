@@ -7,7 +7,7 @@
      "genre":"Science Fiction",
      "publisher":"Sidwick & Jackson Ltd",
      "published":"1954",
-     "blurb":"stuff happens"
+     "blurb":"Earthhas become a utopia, guided by Overlords from outer space, for 50 years they lived peacfully and guided us. Until one night a child begins to develop remarkable powers."
    },
    { "cover":"/static/img/Neverwhere.jpg",
      "title":"Neverwhere",
@@ -15,7 +15,7 @@
      "genre":"Fantasy",
      "publisher":"BBC Books",
      "published":"1996",
-     "blurb":"other stuff happens"
+     "blurb":"There is a place most could never dream of. A city of monsters and saints, murderers and angels, the city of those who have fallen between the cracks. A single act of kindness catapults Richard Mayer into a world that is utterly bizarre to find a strange destiny awaits him."
    }, 
    { "cover":"/static/img/Boneshaker.jpg",
      "title":"Boneshaker",
@@ -23,7 +23,7 @@
      "genre":"Science Fiction",
      "publisher":"Tor Books",
      "published":"2009",
-     "blurb":"more differnt stuff happens"
+     "blurb":"In the early days of the Civil War, Leviticus Blue was commision to build a machine to mine through Alaskas ice. However the first test of his Bone-shaking drill engine went arwy and destroyed several blocks of downtown Seattle and unleased the blight gas. Now sixteen years later Blue's widow Briar Wilkes and her teenage son Ezekiel life is upturned when he embarks on a secret mission to prove what truely happened all those years ago."
    }
    ]
 }
