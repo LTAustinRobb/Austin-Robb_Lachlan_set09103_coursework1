@@ -2,8 +2,10 @@
 <!doctype html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="../static/css/select.css">
 </head>
 <body>
+ <h1>Author:</h1>
  <ul>
   {% for elem in list %}
      <li><a href ="{{url_for('spauthor',spauthor=elem)}}">{{elem}}</a></li>

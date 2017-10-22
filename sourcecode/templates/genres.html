@@ -4,6 +4,7 @@
 <link rel="stylesheet" type="text/css" href="../static/css/select.css">
 </head>
 <body>
+ <h1>Genre:</h1>
  <ul>
   {% for elem in list %}
      <li><a href ="{{url_for('spgenre',spgenre=elem)}}">{{elem}}</a></li>

@@ -1,8 +1,10 @@
 <!doctype html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="../static/css/select.css">
 </head>
 <body>
+ <h1>Publisher:</h1>
  <ul>
   {% for elem in list %}
      <li><a href ="{{url_for('sppub',sppub=elem)}}">{{elem}}</a></li>

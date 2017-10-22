@@ -1,11 +1,12 @@
 from flask import Flask, request, json, render_template,url_for
 
 app = Flask(__name__)
+#load collection from json
 with app.open_resource('data/books.json') as book_file:
   data = json.load(book_file)
   global book_list
   book_list = data['books']
-
+#method to get list of subcatagories, eg all the genres
 def getlist(sort):
   list=[]
   for elem in book_list:
@@ -15,7 +16,7 @@ def getlist(sort):
           list.append(v)
           list.sort()
   return list
-
+#method to get list of all books belonging to a subcatagory
 def getsplist(sort):
   list=[]
   for elem in book_list:
@@ -26,28 +27,29 @@ def getsplist(sort):
   return list
 @app.route('/',methods=['GET','POST'])
 def index():
+#get info from main page add book form and add to list--TBC
   if request.method == 'POST':
     title = request.form['title']
     author = request.form['author']
     genre = request.form['genre']
     publisher = request.form['publisher']
-    year = request.form['year']
-    book ='{"title":"'+title+'"}'
-    book_list.append(book)
-      
+    year = request.form['published']
+    book ={'title:'+title}
+   # book_list.insert(len(book_list),'title:'+title)
   return render_template("main.html")
 
-
+#page that shows a list of all items in the collection
 @app.route('/title')
 def titles():
   sort='title'
   list=getlist(sort)
   return render_template("titles.html",list=list,books=book_list,title="Title")
-
+#page that shows info about specific item
 @app.route('/title/<title>')
 def title(title):
    return render_template("book.html",list=book_list,title=title)
-
+#routes for navigation, page that displays list of sub catagories and then a
+#page that shows all item in sub catagory
 @app.route('/author')
 def author():
   sort= 'author'

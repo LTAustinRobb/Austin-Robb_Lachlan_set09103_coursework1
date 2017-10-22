@@ -1,8 +1,10 @@
 <!doctype html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="../static/css/select.css">
 </head>
 <body>
+ <h1>Year:</h1>
  <ul>
   {% for elem in list %}
      <li><a href ="{{url_for('spyear',spyear=elem)}}">{{elem}}</a></li>
